@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='initial-scale=1'>
+    <link rel="preload" href="file.json" as="fetch" />`
+  </head>
+  <body>
+  </body>
+  <script>
+    window.onload = async () => {
+      const res = await fetch("file.json", { mode: "no-cors" });
+      const content = await res.json();
+      console.log(content);
+    };
+  </script>
+</html>
